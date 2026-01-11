@@ -108,8 +108,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🔗 Links
 
 - [Rockstar Games](https://www.rockstargames.com)
-- [GTA VI Official Trailer](https://www.youtube.com/watch?v=QdBZY2fkU-0)
-- [GTA VI Official Trailer 2](https://www.youtube.com/watch?v=VQRLujxTm3c)
+- [GTA VI Official Trailer - December 2023](https://www.youtube.com/watch?v=QdBZY2fkU-0)
+- [GTA VI Official Trailer 2 - May 2025](https://www.youtube.com/watch?v=VQRLujxTm3c)
 - [Rockstar Games Twitter](https://twitter.com/RockstarGames)
 
 ---
