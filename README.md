@@ -2,6 +2,10 @@
 
 A modern, responsive countdown timer for the Grand Theft Auto VI release date (November 19, 2026).
 
+# Where do I access the app?
+
+You can go to https://independent-coder.github.io/gta-vi-countdown/ to access the app already deployed on GitHub Pages.
+
 ## 🎮 Features
 
 - **Live Countdown**: Real-time countdown showing days, hours, minutes, and seconds until GTA VI release
@@ -104,7 +108,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🔗 Links
 
 - [Rockstar Games](https://www.rockstargames.com)
-- [GTA VI Official Trailer](https://www.youtube.com/watch?v=QGWZY4XE9EU)
+- [GTA VI Official Trailer](https://www.youtube.com/watch?v=QdBZY2fkU-0)
+- [GTA VI Official Trailer 2](https://www.youtube.com/watch?v=VQRLujxTm3c)
 - [Rockstar Games Twitter](https://twitter.com/RockstarGames)
 
 ---
