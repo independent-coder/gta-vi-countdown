@@ -6,6 +6,7 @@
     <title>GTA VI Countdown - November 19, 2026</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -16,35 +17,43 @@
 
         <main class="main-content">
             <div class="release-date">
-                <div class="date-display">November 19, 2026</div>
+                <div class="date-display"><i class="fas fa-calendar-alt"></i> November 19, 2026</div>
             </div>
 
             <div class="countdown-container">
                 <div class="countdown-item">
+                    <div class="countdown-value" id="years">0</div>
+                    <div class="countdown-label"><i class="fas fa-clock"></i> Years</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="months">0</div>
+                    <div class="countdown-label"><i class="fas fa-calendar-week"></i> Months</div>
+                </div>
+                <div class="countdown-item">
                     <div class="countdown-value" id="days">0</div>
-                    <div class="countdown-label">Days</div>
+                    <div class="countdown-label"><i class="fas fa-sun"></i> Days</div>
                 </div>
                 <div class="countdown-item">
                     <div class="countdown-value" id="hours">0</div>
-                    <div class="countdown-label">Hours</div>
+                    <div class="countdown-label"><i class="fas fa-hourglass-half"></i> Hours</div>
                 </div>
                 <div class="countdown-item">
                     <div class="countdown-value" id="minutes">0</div>
-                    <div class="countdown-label">Minutes</div>
+                    <div class="countdown-label"><i class="fas fa-stopwatch"></i> Minutes</div>
                 </div>
                 <div class="countdown-item">
                     <div class="countdown-value" id="seconds">0</div>
-                    <div class="countdown-label">Seconds</div>
+                    <div class="countdown-label"><i class="fas fa-bolt"></i> Seconds</div>
                 </div>
             </div>
 
             <div class="trailers-section">
-                <h2 class="trailers-title">Official Trailers</h2>
+                <h2 class="trailers-title"><i class="fas fa-film"></i> Official Trailers</h2>
                 <div class="trailers-container">
                     <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" class="trailer-link">
                         <div class="trailer-card">
                             <div class="trailer-thumbnail">
-                                <div class="play-button">▶</div>
+                                <div class="play-button"><i class="fas fa-play"></i></div>
                                 <img src="https://img.youtube.com/vi/QdBZY2fkU-0/maxresdefault.jpg" alt="Trailer 1" loading="lazy">
                             </div>
                             <div class="trailer-info">
@@ -56,7 +65,7 @@
                     <a href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank" class="trailer-link">
                         <div class="trailer-card">
                             <div class="trailer-thumbnail">
-                                <div class="play-button">▶</div>
+                                <div class="play-button"><i class="fas fa-play"></i></div>
                                 <img src="https://img.youtube.com/vi/VQRLujxTm3c/maxresdefault.jpg" alt="Trailer 2" loading="lazy">
                             </div>
                             <div class="trailer-info">
@@ -76,17 +85,20 @@
             </div>
 
             <div class="motivational-quote" id="quote">
-                "The wait is almost over..."
+                <i class="fas fa-quote-left"></i> The wait is almost over... <i class="fas fa-quote-right"></i>
             </div>
         </main>
 
         <footer class="footer">
             <div class="social-links">
-                <a href="https://www.rockstargames.com" target="_blank" class="social-link">Rockstar Games</a>
+                <a href="https://www.rockstargames.com" target="_blank" class="social-link"><i class="fas fa-gamepad"></i> Rockstar Games</a>
                 <span class="separator">•</span>
-                <a href="https://twitter.com/RockstarGames" target="_blank" class="social-link">Twitter</a>
+                <a href="https://twitter.com/RockstarGames" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
                 <span class="separator">•</span>
-                <a href="https://www.youtube.com/RockstarGames" target="_blank" class="social-link">YouTube</a>
+                <a href="https://www.youtube.com/RockstarGames" target="_blank" class="social-link"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+            <div class="footer-text">
+                <p>Made by Independent-Coder. Visit the repo <a href="https://github.com/Independent-Coder/gta-vi-countdown" target="_blank">here</a></p>
             </div>
         </footer>
     </div>
