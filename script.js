@@ -1,7 +1,7 @@
 class GTAVICountdown {
     constructor() {
         this.targetDate = new Date('November 19, 2026 00:00:00').getTime();
-        this.startDate = new Date('December 5, 2023 00:00:00').getTime(); // Official announcement date
+        this.startDate = new Date('February 4, 2022 00:00:00').getTime(); // Official announcement date
         this.quotes = [
             "The wait is almost over...",
             "Get ready for Vice City...",
@@ -47,11 +47,34 @@ class GTAVICountdown {
             return;
         }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Calculate years, months, days, hours, minutes, seconds
+        const targetDate = new Date(this.targetDate);
+        const currentDate = new Date(now);
+        
+        let years = targetDate.getFullYear() - currentDate.getFullYear();
+        let months = targetDate.getMonth() - currentDate.getMonth();
+        let days = targetDate.getDate() - currentDate.getDate();
+        
+        // Adjust for negative values
+        if (days < 0) {
+            months--;
+            const lastMonth = new Date(targetDate.getFullYear(), targetDate.getMonth(), 0);
+            days += lastMonth.getDate();
+        }
+        
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+        
+        // Calculate remaining time for hours, minutes, seconds
+        const remainingTime = distance % (1000 * 60 * 60 * 24);
+        const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
+        this.updateElement('years', years);
+        this.updateElement('months', months);
         this.updateElement('days', days);
         this.updateElement('hours', hours);
         this.updateElement('minutes', minutes);
@@ -66,11 +89,15 @@ class GTAVICountdown {
         if (element) {
             const formattedValue = value.toString().padStart(2, '0');
             if (element.textContent !== formattedValue) {
-                element.textContent = formattedValue;
-                element.style.transform = 'scale(1.1)';
+                // Smooth scale animation
+                element.style.transform = 'scale(1.05)';
+                element.style.color = '#ffd700';
+                
                 setTimeout(() => {
+                    element.textContent = formattedValue;
                     element.style.transform = 'scale(1)';
-                }, 200);
+                    element.style.color = '#ffffff';
+                }, 150);
             }
         }
     }
@@ -78,10 +105,14 @@ class GTAVICountdown {
     animateValue(id) {
         const element = document.getElementById(id);
         if (element) {
-            element.style.color = '#ffd700';
+            // Create a pulse effect
+            element.style.textShadow = '0 0 30px rgba(255, 215, 0, 0.8)';
+            element.style.transform = 'scale(1.02)';
+            
             setTimeout(() => {
-                element.style.color = '#ffffff';
-            }, 500);
+                element.style.textShadow = '0 0 20px rgba(255, 255, 255, 0.5)';
+                element.style.transform = 'scale(1)';
+            }, 300);
         }
     }
 
@@ -245,20 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Add some Easter eggs
 document.addEventListener('keydown', (e) => {
-    // Konami code for a special effect
-    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-    
-    if (!window.konamiInput) {
-        window.konamiInput = [];
-    }
-    
-    window.konamiInput.push(e.key);
-    window.konamiInput = window.konamiInput.slice(-10);
-    
-    if (JSON.stringify(window.konamiInput) === JSON.stringify(konamiCode)) {
-        document.body.style.animation = 'pulse 0.5s ease-in-out 3';
-        setTimeout(() => {
-            document.body.style.animation = '';
-        }, 1500);
-    }
+    // Add other keyboard shortcuts here if needed
+    console.log('Key pressed:', e.key);
 });
