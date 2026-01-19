@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown">
 </head>
 <body>
+    <!-- Dynamic GTA VI Background Images -->
+    <div class="gta-background" id="gta-background"></div>
+    
+    <!-- Current Background Image Name -->
+    <div class="background-info" id="background-info">
+        <i class="fas fa-image"></i>
+        <span id="background-name">Loading...</span>
+    </div>
+    
+    <!-- Toggle Countdown Button -->
+    <button class="toggle-countdown" id="toggle-countdown" title="Toggle Countdown">
+        <i class="fas fa-eye"></i>
+    </button>
+    
     <div class="container">
         <header class="header">
             <h1 class="title">GRAND THEFT AUTO VI</h1>
@@ -90,15 +105,18 @@
         </main>
 
         <footer class="footer">
-            <div class="social-links">
-                <a href="https://www.rockstargames.com" target="_blank" class="social-link"><i class="fas fa-gamepad"></i> Rockstar Games</a>
-                <span class="separator">•</span>
-                <a href="https://twitter.com/RockstarGames" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
-                <span class="separator">•</span>
-                <a href="https://www.youtube.com/RockstarGames" target="_blank" class="social-link"><i class="fab fa-youtube"></i> YouTube</a>
-            </div>
             <div class="footer-text">
                 <p>Made by Independent-Coder. Visit the repo <a href="https://github.com/Independent-Coder/gta-vi-countdown" target="_blank">here</a></p>
+                <p>&copy; 2025 GTA VI Countdown. Not affiliated with Rockstar Games.</p>
+                <p>Grand Theft Auto VI is a trademark of Take-Two Interactive Software. All images and trademarks belong to their respective owners.</p>
+                <p>
+                    <a href="https://www.rockstargames.com" target="_blank" rel="noopener">
+                        <i class="fas fa-globe"></i> Rockstar Games
+                    </a> |
+                    <a href="https://twitter.com/RockstarGames" target="_blank" rel="noopener">
+                        <i class="fab fa-twitter"></i> Rockstar Games
+                    </a>
+                </p>
             </div>
         </footer>
     </div>

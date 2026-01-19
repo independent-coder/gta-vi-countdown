@@ -38,6 +38,135 @@ body::before {
     z-index: 1;
 }
 
+/* Dynamic background image system */
+.gta-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+    transition: 
+        opacity 2s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    transform: scale(1.05);
+}
+
+.gta-background.active {
+    opacity: 0.25;
+    transform: scale(1);
+}
+
+/* Smooth crossfade effect */
+.gta-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.gta-background.active::before {
+    opacity: 1;
+}
+
+/* Background image info display */
+.background-info {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.background-info.visible {
+    opacity: 0.8;
+    transform: translateY(0);
+}
+
+.background-info i {
+    margin-right: 6px;
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.background-info span {
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* Toggle countdown button */
+.toggle-countdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 15;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffd700;
+    font-size: 14px;
+}
+
+.toggle-countdown:hover {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.6);
+    transform: scale(1.1);
+}
+
+.toggle-countdown:active {
+    transform: scale(0.95);
+}
+
+.toggle-countdown.hidden i {
+    transform: rotate(180deg);
+}
+
+/* Countdown visibility states */
+.container.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 .container {
     max-width: 1200px;
     width: 100%;
@@ -45,6 +174,10 @@ body::before {
     text-align: center;
     position: relative;
     z-index: 2;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .header {
@@ -53,7 +186,7 @@ body::before {
 }
 
 .title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Pricedown Bl', sans-serif;
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 900;
     background: linear-gradient(45deg, #ffd700, #ff4500, #ffd700);

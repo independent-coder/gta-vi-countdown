@@ -18,7 +18,13 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 - **Smooth Animations**: Beautiful transitions, hover effects, and micro-interactions
 - **Motivational Quotes**: Rotating quotes that change every 10 seconds to keep the hype alive
 - **Interactive Elements**: Click countdown items for visual feedback
-- **Release Celebration**: Special confetti animation when the countdown reaches zero
+- **Release Celebration**: Special confetti animation when countdown reaches zero
+- **Dynamic Background System**: 65+ official GTA VI images rotating every 30 seconds
+- **Randomized Display**: Images shuffle randomly for unique viewing experience
+- **Preloaded Images**: All images preloaded for stutter-free transitions
+- **Background Info Display**: Shows current background image name in bottom-right corner
+- **Toggle Countdown**: Button to hide/show countdown for better image viewing
+- **Professional Disclaimer**: Legal disclaimers for trademark and copyright compliance
 
 ## 🚀 GitHub Pages Setup
 
@@ -68,13 +74,30 @@ Update the CSS color scheme in `styles.css`:
 --secondary-color: #ff4500;
 ```
 
+### Background Images
+The app uses official GTA VI images from Rockstar Games. To modify:
+```javascript
+// Add new images to the backgroundImages array in script.js
+this.backgroundImages = [
+    'your-image-1.jpg',
+    'your-image-2.jpg'
+    // Add more images...
+];
+```
+
+### Toggle Countdown
+The eye button in the top-right corner allows users to:
+- Hide the countdown interface for better image viewing
+- Show the countdown interface when needed
+- Background rotation continues regardless of visibility state
+
 ## 📁 Project Structure
 
 ```
 gta-vi-countdown/
-├── index.html          # Main HTML file
-├── styles.css          # All styles and animations
-├── script.js           # Countdown logic and interactions
+├── index.html          # Main HTML file with background system and toggle
+├── styles.css          # All styles, animations, and responsive design
+├── script.js           # Countdown logic, background rotation, and interactions
 ├── README.md           # This file
 ├── LICENSE             # MIT License
 └── .gitignore          # Git ignore file
@@ -83,6 +106,7 @@ gta-vi-countdown/
 ## 🔗 Links
 
 - **Live App**: https://independent-coder.github.io/gta-vi-countdown/
+- **GitHub Repository**: https://github.com/Independent-Coder/gta-vi-countdown
 - **Rockstar Games**: https://www.rockstargames.com
 - **GTA VI Official Trailer - December 2023**: https://www.youtube.com/watch?v=QdBZY2fkU-0
 - **GTA VI Official Trailer 2 - May 2025**: https://www.youtube.com/watch?v=VQRLujxTm3c
