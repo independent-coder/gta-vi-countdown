@@ -37,6 +37,9 @@ body::before {
     pointer-events: none;
     z-index: 1;
 }
+.seo-text {
+    display: none;
+}
 
 /* Dynamic background image system */
 .gta-background {

@@ -1,6 +1,14 @@
 # GTA VI Countdown App
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=Independent-Coder.gta-vi-countdown)
+![GitHub last commit](https://img.shields.io/github/last-commit/Independent-Coder/gta-vi-countdown)
+![GitHub stars](https://img.shields.io/github/stars/Independent-Coder/gta-vi-countdown)
 
 A modern, responsive countdown timer for the Grand Theft Auto VI release date (November 19, 2026).
+
+## Preview
+<img src="./screenshots/desktop.jpg" alt="Desktop preview" width="400" />
+<img src="./screenshots/mobile.jpg" alt="Mobile preview" width="200" />
+
 
 ## 🌐 Live Demo
 
@@ -98,6 +106,9 @@ gta-vi-countdown/
 ├── index.html          # Main HTML file with background system and toggle
 ├── styles.css          # All styles, animations, and responsive design
 ├── script.js           # Countdown logic, background rotation, and interactions
+├── favicon.png         # Website favicon
+├── assets/             # Additional assets
+├── screenshots/        # Preview images
 ├── README.md           # This file
 ├── LICENSE             # MIT License
 └── .gitignore          # Git ignore file
@@ -128,6 +139,6 @@ This project is open source and available under [MIT License](LICENSE).
 
 ---
 
-⚠️ **Disclaimer**: This is a fan-made countdown timer. The release date is based on official announcements from Rockstar Games and may be subject to change.
+⚠️ **Disclaimer**: This is a fan-made countdown timer. The release date is based on official announcements from Rockstar Games and may be subject to change. Not affiliated with Rockstar Games. Grand Theft Auto VI is a trademark of Take-Two Interactive Software. All images and trademarks belong to their respective owners.
 
 *Made with ❤️ by GTA fans, for GTA fans*
