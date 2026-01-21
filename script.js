@@ -3,99 +3,122 @@ class GTAVICountdown {
         this.targetDate = new Date('November 19, 2026 00:00:00').getTime();
         this.startDate = new Date('February 4, 2022 00:00:00').getTime(); // Official announcement date
         
-        // Official GTA VI background images from Rockstar Games
-        this.baseUrl = 'https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2F';
-        this.imageParams = '&w=1920&q=75';
+        // Official GTA VI background images from GTA Wiki (Fandom)
+        this.baseUrl = 'https://static.wikia.nocookie.net/gtawiki/images/';
+        this.imageParams = '';
         
         this.backgroundImages = [
-            // Characters
-            'Jason_Duval_01.6e287338.jpg',
-            'Jason_Duval_02.c2f33c0d.jpg',
-            'Jason_Duval_03.aaf481e5.jpg',
-            'Jason_Duval_04.374574ad.jpg',
-            'Jason_Duval_05.921c79be.jpg',
-            'Jason_Duval_06.e498e308.jpg',
-            'Lucia_Caminos_01.f5023e0f.jpg',
-            'Lucia_Caminos_02.f833743a.jpg',
-            'Lucia_Caminos_03.e39f02a9.jpg',
-            'Lucia_Caminos_04.76419a9d.jpg',
-            'Lucia_Caminos_05.20831085.jpg',
-            'Lucia_Caminos_06.a158f77c.jpg',
-            'Cal_Hampton_01.86793e65.jpg',
-            'Cal_Hampton_02.b58d263e.jpg',
-            'Cal_Hampton_03.cba3d4d8.jpg',
-            'Cal_Hampton_04.07347c1d.jpg',
-            'Boobie_Ike_01.8aee3bef.jpg',
-            'Boobie_Ike_02.92f4fe40.jpg',
-            'Boobie_Ike_03.544bbd85.jpg',
-            'Boobie_Ike_04.de9c38b3.jpg',
-            'DreQuan_Priest_01.10a7473c.jpg',
-            'DreQuan_Priest_02.53b9ec07.jpg',
-            'DreQuan_Priest_03.7aa48b92.jpg',
-            'DreQuan_Priest_04.30db96f3.jpg',
-            'Real_Dimez_01.c74db009.jpg',
-            'Real_Dimez_02.0ea0477d.jpg',
-            'Real_Dimez_03.c382b50e.jpg',
-            'Real_Dimez_04.457b11b3.jpg',
-            'Raul_Bautista_01.b4438643.jpg',
-            'Raul_Bautista_02.cfb197c0.jpg',
-            'Raul_Bautista_03.f57b4046.jpg',
-            'Raul_Bautista_04.934bfa66.jpg',
-            'Brian_Heder_01.10393e61.jpg',
-            'Brian_Heder_02.ad5172f3.jpg',
-            'Brian_Heder_03.1bd6d8bd.jpg',
-            'Brian_Heder_04.8b0bd870.jpg',
-            // Locations
-            'Vice_City_01.332891cf.jpg',
-            'Vice_City_02.1c840675.jpg',
-            'Vice_City_03.9b0e117a.jpg',
-            'Vice_City_04.00931b7e.jpg',
-            'Vice_City_05.e8171acb.jpg',
-            'Vice_City_06.34eff5bd.jpg',
-            'Vice_City_07.c1ec0b18.jpg',
-            'Vice_City_08.a5c9c85d.jpg',
-            'Vice_City_09.632112c4.jpg',
-            'Leonida_Keys_01.1af17390.jpg',
-            'Leonida_Keys_02.fa5d8dc9.jpg',
-            'Leonida_Keys_03.f73a61f6.jpg',
-            'Leonida_Keys_04.ef02d8b3.jpg',
-            'Leonida_Keys_05.cf35e824.jpg',
-            'Port_Gellhorn_01.386c1d6e.jpg',
-            'Port_Gellhorn_02.fef56516.jpg',
-            'Port_Gellhorn_03.a8b22d6d.jpg',
-            'Port_Gellhorn_04.580f17d9.jpg',
-            'Port_Gellhorn_05.abb2a58f.jpg',
-            'Ambrosia_01.0c8fad88.jpg',
-            'Ambrosia_02.ec311051.jpg',
-            'Ambrosia_03.6a1e258e.jpg',
-            'Ambrosia_04.a8d67313.jpg',
-            'Ambrosia_05.6d6703dc.jpg',
-            'Grassrivers_01.3abae122.jpg',
-            'Grassrivers_02.9d9c5cbf.jpg',
-            'Grassrivers_03.da407d63.jpg',
-            'Grassrivers_04.375357e4.jpg',
-            'Mount_Kalaga_National_Park_01.080f7cf3.jpg',
-            'Mount_Kalaga_National_Park_02.ec9a34c4.jpg',
-            'Mount_Kalaga_National_Park_03.a841c296.jpg',
-            'Mount_Kalaga_National_Park_04.e5eec73f.jpg',
-            'Mount_Kalaga_National_Park_05.b28e1836.jpg',
-            'Mount_Kalaga_National_Park_06.de4f201d.jpg',
-            // Postcards and Wallpapers
-            'Jason_and_Lucia_02_landscape.8aced7fd.jpg',
-            'Jason_and_Lucia_01_landscape.0e2a6544.jpg',
-            'Jason_and_Lucia_Motel_landscape.565a08c8.jpg',
-            'Cal_Hampton_landscape.b1bc01a4.jpg',
-            'Boobie_Ike_landscape.67ebb1f6.jpg',
-            'DreQuan_Priest_landscape.9070b529.jpg',
-            'Real_Dimez_landscape.f16de7d4.jpg',
-            'Raul_Bautista_landscape.63cb68d4.jpg',
-            'Brian_Heder_landscape.e88fb1ab.jpg',
-            'Vice_City_Postcard_landscape.29f034e9.jpg',
-            'Leonida_Keys_Postcard_landscape.e3710f94.jpg',
-            'Port_Gellhorn_Postcard_landscape.31bacfc2.jpg',
-            'Ambrosia_Postcard_landscape.39ea0178.jpg',
-            'Grassrivers_Postcard_landscape.d7a22955.jpg',
-            'Mount_Kalaga_National_Park_Postcard_landscape.057d9b70.jpg'
+            // Characters - Jason Duval
+            'c/c4/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS1.jpg',
+            'd/df/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS2.jpg',
+            '7/73/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS3.jpg',
+            '3/37/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS4.jpg',
+            'c/c9/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS5.jpg',
+            '5/55/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS6.jpg',
+            
+            // Characters - Lucia Caminos
+            'f/f3/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS1.jpg',
+            '4/43/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS2.jpg',
+            '9/9c/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS3.jpg',
+            '2/23/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS4.jpg',
+            '4/4f/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS5.jpg',
+            '9/9d/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS6.jpg',
+            
+            // Characters - Cal Hampton
+            '6/67/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS1.jpg',
+            '9/99/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS2.jpg',
+            '0/07/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS3.jpg',
+            '9/9a/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS4.jpg',
+            
+            // Characters - Boobie Ike
+            'a/ae/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS1.jpg',
+            '6/67/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS2.jpg',
+            'e/e6/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS3.jpg',
+            'f/f4/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS4.jpg',
+            
+            // Characters - DreQuan Priest
+            '2/2c/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS1.jpg',
+            'b/b9/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS2.jpg',
+            '7/78/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS3.jpg',
+            '7/7e/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS4.jpg',
+            
+            // Characters - Real Dimez
+            '5/59/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS1.jpg',
+            '1/12/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS2.jpg',
+            '8/82/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS3.jpg',
+            'a/a4/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS4.jpg',
+            
+            // Characters - Raul Bautista
+            'b/bf/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS1.jpg',
+            '0/01/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS2.jpg',
+            '3/39/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS3.jpg',
+            '5/5e/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS4.jpg',
+            
+            // Characters - Brian Heder
+            'b/b1/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS1.jpg',
+            'e/eb/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS2.jpg',
+            '9/9d/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS3.jpg',
+            '3/36/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS4.jpg',
+            
+            // Locations - Vice City
+            'c/ce/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS1.jpg',
+            'c/cf/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS2.jpg',
+            'e/e6/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS3.jpg',
+            'f/f3/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS4.jpg',
+            '7/77/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS5.jpg',
+            'a/a9/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS6.jpg',
+            '0/04/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS7.jpg',
+            'f/fa/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS8.jpg',
+            'b/be/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS9.jpg',
+            
+            // Locations - Leonida Keys
+            '9/9a/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS1.jpg',
+            '8/8a/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS2.jpg',
+            '0/0c/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS3.jpg',
+            '9/99/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS4.jpg',
+            'a/ab/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS5.jpg',
+            
+            // Locations - Port Gellhorn
+            '0/0d/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS1.jpg',
+            'e/eb/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS2.jpg',
+            'd/d6/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS3.jpg',
+            '3/3c/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS4.jpg',
+            '1/17/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS5.jpg',
+            
+            // Locations - Ambrosia
+            '4/40/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS1.jpg',
+            '6/67/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS2.jpg',
+            'f/f1/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS3.jpg',
+            '2/2e/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS4.jpg',
+            '7/7a/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS5.jpg',
+            
+            // Locations - Grassrivers
+            '4/48/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS1.jpg',
+            '2/2c/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS2.jpg',
+            '0/02/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS3.jpg',
+            '6/61/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS4.jpg',
+            
+            // Locations - Mount Kalaga
+            'a/a7/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS1.jpg',
+            '1/1c/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS2.jpg',
+            'a/a7/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS3.jpg',
+            'e/e0/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS4.jpg',
+            '7/70/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS5.jpg',
+            'e/e2/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS6.jpg',
+
+            // Artworks
+            '0/0c/Artwork-Trailer1Thumbnail-woDate-GTAVI.jpg',
+            'f/f8/Artwork-Trailer2Thumbnail-GTAVI.jpg',
+            '5/56/Artwork-JasonandLuciaMotel-GTAVI.jpg',
+            'd/d3/Artwork-CalHampton-GTAVI.jpg',
+            '1/19/Artwork-BoobieIke-GTAVI.jpg',
+            '4/4a/Artwork-RealDimez-GTAVI.jpg',
+            'a/a2/Artwork-RaulBautista-GTAVI.jpg',
+            '3/35/Artwork-BrianHeder-GTAVI.jpg',
+            'e/e4/Artwork-ViceCity-BG-GTAVI.jpg',
+            '5/54/Artwork-LeonidaKeys-BG-GTAVI.jpg',
+            '5/5e/Artwork-Grassrivers-BG-GTAVI.jpg',
+            'b/bf/Artwork-DreQuanPriest-GTAVI.jpg'
         ];
         
         // Randomize the array
@@ -176,8 +199,22 @@ class GTAVICountdown {
     }
 
     initBackgroundRotation() {
-        this.rotateBackground();
-        this.updateBackgroundInfo();
+        const backgroundElement = document.getElementById('gta-background');
+        
+        if (backgroundElement && this.backgroundImages.length > 0) {
+            // Set initial background immediately
+            const imageName = this.backgroundImages[0];
+            const imageUrl = this.baseUrl + imageName + this.imageParams;
+            backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+            
+            // Update background info
+            this.updateBackgroundInfo();
+            
+            // Start the fade in effect after a short delay to ensure smooth transition
+            setTimeout(() => {
+                backgroundElement.classList.add('active');
+            }, 100);
+        }
     }
 
     updateBackgroundInfo() {
@@ -186,8 +223,47 @@ class GTAVICountdown {
         
         if (backgroundNameElement && backgroundInfoElement) {
             const imageName = this.backgroundImages[this.currentBackgroundIndex];
-            // Remove file extension and hash part, replace underscores with spaces
-            const displayName = imageName.replace(/\.[^.]+$/, '').replace(/\.[^.]+$/, '').replace(/_/g, ' ');
+            
+            let displayName = '';
+            
+            // Check for screenshot format: OfficialScreenshots-GTAVI-PromotionalWebsite-LocationName-SS##.jpg
+            const screenshotMatch = imageName.match(/OfficialScreenshots-GTAVI-PromotionalWebsite-(.+?)-SS(\d+)\.jpg$/);
+            
+            // Check for artwork format: Artwork-Name-GTAVI.jpg
+            const artworkMatch = imageName.match(/Artwork-(.+?)-GTAVI\.(jpg|png)$/);
+            
+            if (screenshotMatch) {
+                // Format screenshot names
+                let locationName = screenshotMatch[1].replace(/-/g, ' ').replace(/([A-Z])/g, ' $1');
+                const screenshotNumber = screenshotMatch[2].padStart(2, '0');
+                displayName = `${locationName.replace(/\s+/g, ' ').trim()} ${screenshotNumber}`;
+            } else if (artworkMatch) {
+                // Format artwork names
+                let artworkName = artworkMatch[1];
+                
+                // Special cases for better naming
+                if (artworkName.includes('Trailer1Thumbnail wo Date')) {
+                    displayName = 'Trailer 1 Artwork';
+                } else if (artworkName.includes('Trailer2Thumbnail')) {
+                    displayName = 'Trailer 2 Artwork';
+                } else if (artworkName.includes('JasonandLuciaMotel')) {
+                    displayName = 'Jason & Lucia Motel';
+                } else if (artworkName.includes('BG')) {
+                    // Handle BG specifically
+                    artworkName = artworkName.replace('BG', 'Background');
+                    // Add spaces before capital letters and replace dashes
+                    artworkName = artworkName.replace(/-/g, ' ').replace(/([A-Z])/g, ' $1');
+                    displayName = artworkName.replace(/\s+/g, ' ').trim();
+                } else {
+                    // Add spaces before capital letters and replace dashes for other names
+                    artworkName = artworkName.replace(/-/g, ' ').replace(/([A-Z])/g, ' $1');
+                    displayName = artworkName.replace(/\s+/g, ' ').trim();
+                }
+            } else {
+                // Fallback for any other format
+                displayName = imageName.replace(/^.*\//, '').replace(/\.[^.]+$/, '').replace(/_/g, ' ');
+            }
+            
             backgroundNameElement.textContent = displayName;
             
             // Show with animation

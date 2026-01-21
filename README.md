@@ -27,10 +27,11 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 - **Motivational Quotes**: Rotating quotes that change every 10 seconds to keep the hype alive
 - **Interactive Elements**: Click countdown items for visual feedback
 - **Release Celebration**: Special confetti animation when countdown reaches zero
-- **Dynamic Background System**: 65+ official GTA VI images rotating every 30 seconds
+- **Dynamic Background System**: 75+ official GTA VI images from the GTA Wiki (Fandom) rotating every 30 seconds
+- **4K Image Quality**: High-resolution screenshots and artworks for crystal-clear backgrounds
 - **Randomized Display**: Images shuffle randomly for unique viewing experience
 - **Preloaded Images**: All images preloaded for stutter-free transitions
-- **Background Info Display**: Shows current background image name in bottom-right corner
+- **Background Info Display**: Shows current background image name with clean formatting
 - **Toggle Countdown**: Button to hide/show countdown for better image viewing
 - **Professional Disclaimer**: Legal disclaimers for trademark and copyright compliance
 
@@ -83,7 +84,7 @@ Update the CSS color scheme in `styles.css`:
 ```
 
 ### Background Images
-The app uses official GTA VI images from Rockstar Games. To modify:
+The app uses official GTA VI images from the GTA Wiki (Fandom) in 4K quality. To modify:
 ```javascript
 // Add new images to the backgroundImages array in script.js
 this.backgroundImages = [
@@ -91,6 +92,7 @@ this.backgroundImages = [
     'your-image-2.jpg'
     // Add more images...
 ];
+// Images should follow the Fandom naming convention for proper display
 ```
 
 ### Toggle Countdown
