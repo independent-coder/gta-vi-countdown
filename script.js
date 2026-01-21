@@ -5,7 +5,7 @@ class GTAVICountdown {
         
         // Official GTA VI background images from GTA Wiki (Fandom)
         this.baseUrl = 'https://static.wikia.nocookie.net/gtawiki/images/';
-        this.imageParams = '/revision/latest?cb=1';
+        this.imageParams = '';
 
         
         this.backgroundImages = [
@@ -207,6 +207,7 @@ class GTAVICountdown {
             const imageName = this.backgroundImages[0];
             const imageUrl = this.baseUrl + imageName + this.imageParams;
             backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+            backgroundElement.offsetHeight; // force reflow
             
             // Update background info
             this.updateBackgroundInfo();
