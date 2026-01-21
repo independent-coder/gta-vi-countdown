@@ -5,7 +5,8 @@ class GTAVICountdown {
         
         // Official GTA VI background images from GTA Wiki (Fandom)
         this.baseUrl = 'https://static.wikia.nocookie.net/gtawiki/images/';
-        this.imageParams = '';
+        this.imageParams = '/revision/latest?cb=1';
+
         
         this.backgroundImages = [
             // Characters - Jason Duval
