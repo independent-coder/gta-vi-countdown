@@ -32,6 +32,9 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 - **Randomized Display**: Images shuffle randomly for unique viewing experience
 - **Preloaded Images**: All images preloaded for stutter-free transitions
 - **Background Info Display**: Shows current background image name with clean formatting
+- **Amazing Milestones Section**: Tracks key GTA VI dates with real-time countdowns
+- **Smart Milestone Tracking**: Shows past achievements and upcoming events
+- **Release Timeline**: From first trailer to launch day with visual indicators
 - **Toggle Countdown**: Button to hide/show countdown for better image viewing
 - **Professional Disclaimer**: Legal disclaimers for trademark and copyright compliance
 
@@ -53,6 +56,7 @@ This repository is optimized for GitHub Pages deployment. The app is already liv
 
 - **HTML5**: Semantic markup and modern structure
 - **CSS3**: Flexbox, Grid, animations, and custom properties
+- **ES6 Modules**: Modular JavaScript architecture with imports/exports
 - **Vanilla JavaScript**: No frameworks required - pure, modern JavaScript
 - **Google Fonts**: Orbitron and Roboto for that perfect gaming aesthetic
 - **Font Awesome**: Professional icons throughout the interface
@@ -100,9 +104,16 @@ The eye button in the top-right corner allows users to:
 gta-vi-countdown/
 ├── index.html          # Main HTML file with background system and toggle
 ├── styles.css          # All styles, animations, and responsive design
-├── script.js           # Countdown logic, background rotation, and interactions
-├── favicon.png         # Website favicon
+├── js/                 # Modular JavaScript components
+│   ├── app.js          # Main application entry point
+│   ├── config.js       # Configuration constants and data
+│   ├── device-detector.js  # Device detection and optimization
+│   ├── background-manager.js  # Background image management
+│   ├── countdown-timer.js     # Countdown timer functionality
+│   ├── milestones-manager.js   # Milestones tracking and display
+│   └── ui-manager.js          # UI interactions and effects
 ├── assets/             # Additional assets
+│   └── backgrounds/    # Official GTA VI images (hosted locally)
 ├── screenshots/        # Preview images
 ├── README.md           # This file
 ├── LICENSE             # MIT License
