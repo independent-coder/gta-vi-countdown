@@ -84,16 +84,9 @@ Update the CSS color scheme in `styles.css`:
 ```
 
 ### Background Images
-The app uses official GTA VI images from the GTA Wiki (Fandom) in 4K quality. To modify:
-```javascript
-// Add new images to the backgroundImages array in script.js
-this.backgroundImages = [
-    'your-image-1.jpg',
-    'your-image-2.jpg'
-    // Add more images...
-];
-// Images should follow the Fandom naming convention for proper display
-```
+The app hosts official GTA VI images locally to avoid CDN rate limits. Images are organized in the `assets/backgrounds/` directory with proper naming conventions for smart display. The hosted images are pulled and downloaded from Rockstar's official website in full 4K resolution.
+
+**Note**: We only host the official GTA VI images because of the CDN rate limits implied by first Rockstar's official website then fandom.com.
 
 ### Toggle Countdown
 The eye button in the top-right corner allows users to:
@@ -141,6 +134,6 @@ This project is open source and available under [MIT License](LICENSE).
 
 ---
 
-⚠️ **Disclaimer**: This is a fan-made countdown timer. The release date is based on official announcements from Rockstar Games and may be subject to change. Not affiliated with Rockstar Games. Grand Theft Auto VI is a trademark of Take-Two Interactive Software. All images and trademarks belong to their respective owners.
+⚠️ **Disclaimer**: This is a fan-made countdown timer. The release date is based on official announcements from Rockstar Games and may be subject to change. Not affiliated with Rockstar Games. Grand Theft Auto VI is a trademark of Take-Two Interactive Software. The images are used for display purposes only and are not distributed for commercial use. The images are the property of Rockstar Games and Take-Two Interactive Software.
 
 *Made with ❤️ by GTA fans, for GTA fans*

@@ -4,123 +4,101 @@ class GTAVICountdown {
         this.startDate = new Date('February 4, 2022 00:00:00').getTime(); // Official announcement date
         
         // Official GTA VI background images from GTA Wiki (Fandom)
-        this.baseUrl = 'https://static.wikia.nocookie.net/gtawiki/images/';
+        this.baseUrl = 'assets/backgrounds/';
         this.imageParams = '';
 
         
-        this.backgroundImages = [
-            // Characters - Jason Duval
-            'c/c4/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS1.jpg',
-            'd/df/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS2.jpg',
-            '7/73/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS3.jpg',
-            '3/37/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS4.jpg',
-            'c/c9/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS5.jpg',
-            '5/55/OfficialScreenshots-GTAVI-PromotionalWebsite-JasonDuval-SS6.jpg',
-            
-            // Characters - Lucia Caminos
-            'f/f3/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS1.jpg',
-            '4/43/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS2.jpg',
-            '9/9c/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS3.jpg',
-            '2/23/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS4.jpg',
-            '4/4f/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS5.jpg',
-            '9/9d/OfficialScreenshots-GTAVI-PromotionalWebsite-LuciaCaminos-SS6.jpg',
-            
-            // Characters - Cal Hampton
-            '6/67/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS1.jpg',
-            '9/99/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS2.jpg',
-            '0/07/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS3.jpg',
-            '9/9a/OfficialScreenshots-GTAVI-PromotionalWebsite-CalHampton-SS4.jpg',
-            
-            // Characters - Boobie Ike
-            'a/ae/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS1.jpg',
-            '6/67/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS2.jpg',
-            'e/e6/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS3.jpg',
-            'f/f4/OfficialScreenshots-GTAVI-PromotionalWebsite-BoobieIke-SS4.jpg',
-            
-            // Characters - DreQuan Priest
-            '2/2c/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS1.jpg',
-            'b/b9/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS2.jpg',
-            '7/78/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS3.jpg',
-            '7/7e/OfficialScreenshots-GTAVI-PromotionalWebsite-DreQuanPriest-SS4.jpg',
-            
-            // Characters - Real Dimez
-            '5/59/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS1.jpg',
-            '1/12/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS2.jpg',
-            '8/82/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS3.jpg',
-            'a/a4/OfficialScreenshots-GTAVI-PromotionalWebsite-RealDimez-SS4.jpg',
-            
-            // Characters - Raul Bautista
-            'b/bf/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS1.jpg',
-            '0/01/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS2.jpg',
-            '3/39/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS3.jpg',
-            '5/5e/OfficialScreenshots-GTAVI-PromotionalWebsite-RaulBautista-SS4.jpg',
-            
-            // Characters - Brian Heder
-            'b/b1/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS1.jpg',
-            'e/eb/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS2.jpg',
-            '9/9d/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS3.jpg',
-            '3/36/OfficialScreenshots-GTAVI-PromotionalWebsite-BrianHeder-SS4.jpg',
-            
-            // Locations - Vice City
-            'c/ce/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS1.jpg',
-            'c/cf/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS2.jpg',
-            'e/e6/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS3.jpg',
-            'f/f3/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS4.jpg',
-            '7/77/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS5.jpg',
-            'a/a9/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS6.jpg',
-            '0/04/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS7.jpg',
-            'f/fa/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS8.jpg',
-            'b/be/OfficialScreenshots-GTAVI-PromotionalWebsite-ViceCity-SS9.jpg',
-            
-            // Locations - Leonida Keys
-            '9/9a/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS1.jpg',
-            '8/8a/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS2.jpg',
-            '0/0c/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS3.jpg',
-            '9/99/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS4.jpg',
-            'a/ab/OfficialScreenshots-GTAVI-PromotionalWebsite-LeonidaKeys-SS5.jpg',
-            
-            // Locations - Port Gellhorn
-            '0/0d/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS1.jpg',
-            'e/eb/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS2.jpg',
-            'd/d6/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS3.jpg',
-            '3/3c/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS4.jpg',
-            '1/17/OfficialScreenshots-GTAVI-PromotionalWebsite-PortGellhorn-SS5.jpg',
-            
-            // Locations - Ambrosia
-            '4/40/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS1.jpg',
-            '6/67/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS2.jpg',
-            'f/f1/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS3.jpg',
-            '2/2e/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS4.jpg',
-            '7/7a/OfficialScreenshots-GTAVI-PromotionalWebsite-Ambrosia-SS5.jpg',
-            
-            // Locations - Grassrivers
-            '4/48/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS1.jpg',
-            '2/2c/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS2.jpg',
-            '0/02/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS3.jpg',
-            '6/61/OfficialScreenshots-GTAVI-PromotionalWebsite-Grassrivers-SS4.jpg',
-            
-            // Locations - Mount Kalaga
-            'a/a7/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS1.jpg',
-            '1/1c/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS2.jpg',
-            'a/a7/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS3.jpg',
-            'e/e0/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS4.jpg',
-            '7/70/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS5.jpg',
-            'e/e2/OfficialScreenshots-GTAVI-PromotionalWebsite-MountKalaga-SS6.jpg',
+        this.backgroundImages = [   
+            // Characters
+            'characters/BoobieIke/Boobie_Ike_01.jpg',
+            'characters/BoobieIke/Boobie_Ike_02.jpg',
+            'characters/BoobieIke/Boobie_Ike_03.jpg',
+            'characters/BoobieIke/Boobie_Ike_04.jpg',
+            'characters/BrianHeder/Brian_Heder_01.jpg',
+            'characters/BrianHeder/Brian_Heder_02.jpg',
+            'characters/BrianHeder/Brian_Heder_03.jpg',
+            'characters/BrianHeder/Brian_Heder_04.jpg',
+            'characters/CalHampton/Cal_Hampton_01.jpg',
+            'characters/CalHampton/Cal_Hampton_02.jpg',
+            'characters/CalHampton/Cal_Hampton_03.jpg',
+            'characters/CalHampton/Cal_Hampton_04.jpg',
+            'characters/DreQuanPriest/DreQuan_Priest_01.jpg',
+            'characters/DreQuanPriest/DreQuan_Priest_02.jpg',
+            'characters/DreQuanPriest/DreQuan_Priest_03.jpg',
+            'characters/DreQuanPriest/DreQuan_Priest_04.jpg',
+            'characters/JasonDuval/Jason_Duval_01.jpg',
+            'characters/JasonDuval/Jason_Duval_02.jpg',
+            'characters/JasonDuval/Jason_Duval_03.jpg',
+            'characters/JasonDuval/Jason_Duval_04.jpg',
+            'characters/JasonDuval/Jason_Duval_05.jpg',
+            'characters/JasonDuval/Jason_Duval_06.jpg',
+            'characters/LuciaCaminos/Lucia_Caminos_01.jpg',
+            'characters/LuciaCaminos/Lucia_Caminos_02.jpg',
+            'characters/LuciaCaminos/Lucia_Caminos_03.jpg',
+            'characters/LuciaCaminos/Lucia_Caminos_04.jpg',
+            'characters/LuciaCaminos/Lucia_Caminos_05.jpg',
+            'characters/LuciaCaminos/Lucia_Caminos_06.jpg',
+            'characters/RaulBautista/Raul_Bautista_01.jpg',
+            'characters/RaulBautista/Raul_Bautista_02.jpg',
+            'characters/RaulBautista/Raul_Bautista_03.jpg',
+            'characters/RaulBautista/Raul_Bautista_04.jpg',
+            'characters/RealDimez/Real_Dimez_01.jpg',
+            'characters/RealDimez/Real_Dimez_02.jpg',
+            'characters/RealDimez/Real_Dimez_03.jpg',
+            'characters/RealDimez/Real_Dimez_04.jpg',
 
+            // Locations
+            'locations/Ambrosia/Ambrosia_01.jpg',
+            'locations/Ambrosia/Ambrosia_02.jpg',
+            'locations/Ambrosia/Ambrosia_03.jpg',
+            'locations/Ambrosia/Ambrosia_04.jpg',
+            'locations/Ambrosia/Ambrosia_05.jpg',
+            'locations/GrassRivers/GrassRivers_01.jpg',
+            'locations/GrassRivers/GrassRivers_02.jpg',
+            'locations/GrassRivers/GrassRivers_03.jpg',
+            'locations/GrassRivers/GrassRivers_04.jpg',
+            'locations/LeonidaKeys/Leonida_Keys_01.jpg',
+            'locations/LeonidaKeys/Leonida_Keys_02.jpg',
+            'locations/LeonidaKeys/Leonida_Keys_03.jpg',
+            'locations/LeonidaKeys/Leonida_Keys_04.jpg',
+            'locations/LeonidaKeys/Leonida_Keys_05.jpg',
+            'locations/MountKalagaNationalPark/Mount_Kalaga_National_Park_01.jpg',
+            'locations/MountKalagaNationalPark/Mount_Kalaga_National_Park_02.jpg',
+            'locations/MountKalagaNationalPark/Mount_Kalaga_National_Park_03.jpg',
+            'locations/MountKalagaNationalPark/Mount_Kalaga_National_Park_04.jpg',
+            'locations/MountKalagaNationalPark/Mount_Kalaga_National_Park_05.jpg',
+            'locations/MountKalagaNationalPark/Mount_Kalaga_National_Park_06.jpg',
+            'locations/PortGellhorn/Port_Gellhorn_01.jpg',
+            'locations/PortGellhorn/Port_Gellhorn_02.jpg',
+            'locations/PortGellhorn/Port_Gellhorn_03.jpg',
+            'locations/PortGellhorn/Port_Gellhorn_04.jpg',
+            'locations/PortGellhorn/Port_Gellhorn_05.jpg',
+            'locations/ViceCity/Vice_City_01.jpg',
+            'locations/ViceCity/Vice_City_02.jpg',
+            'locations/ViceCity/Vice_City_03.jpg',
+            'locations/ViceCity/Vice_City_04.jpg',
+            'locations/ViceCity/Vice_City_05.jpg',
+            'locations/ViceCity/Vice_City_06.jpg',
+            'locations/ViceCity/Vice_City_07.jpg',
+            'locations/ViceCity/Vice_City_08.jpg',
+            'locations/ViceCity/Vice_City_09.jpg',
             // Artworks
-            '0/0c/Artwork-Trailer1Thumbnail-woDate-GTAVI.jpg',
-            'f/f8/Artwork-Trailer2Thumbnail-GTAVI.jpg',
-            '5/56/Artwork-JasonandLuciaMotel-GTAVI.jpg',
-            'd/d3/Artwork-CalHampton-GTAVI.jpg',
-            '1/19/Artwork-BoobieIke-GTAVI.jpg',
-            '4/4a/Artwork-RealDimez-GTAVI.jpg',
-            'a/a2/Artwork-RaulBautista-GTAVI.jpg',
-            '3/35/Artwork-BrianHeder-GTAVI.jpg',
-            'e/e4/Artwork-ViceCity-BG-GTAVI.jpg',
-            '5/54/Artwork-LeonidaKeys-BG-GTAVI.jpg',
-            '5/5e/Artwork-Grassrivers-BG-GTAVI.jpg',
-            'b/bf/Artwork-DreQuanPriest-GTAVI.jpg'
-        ];
+            'artworks/BoobieIke/Boobie_Ike_landscape.jpg',
+            'artworks/BrianHeder/Brian_Heder_landscape.jpg',
+            'artworks/CalHampton/Cal_Hampton_landscape.jpg',
+            'artworks/DreQuanPriest/DreQuan_Priest_landscape.jpg',
+            'artworks/JasonLucia01/Jason_and_Lucia_01_landscape.jpg',
+            'artworks/JasonLucia02/Jason_and_Lucia_02_landscape.jpg',
+            'artworks/JasonLuciaMotel/Jason_and_Lucia_Motel_landscape.jpg',
+            'artworks/Postcards/Ambrosia/Ambrosia_Postcard_landscape.jpg',
+            'artworks/Postcards/Grassrivers/Grassrivers_Postcard_landscape.jpg',
+            'artworks/Postcards/Leonida_Keys/Leonida_Keys_Postcard_landscape.jpg',
+            'artworks/Postcards/Mount_Kalaga_National_Park/Mount_Kalaga_National_Park_Postcard_landscape.jpg',
+            'artworks/Postcards/Port_Gellhorn/Port_Gellhorn_Postcard_landscape.jpg',
+            'artworks/Postcards/Vice_City/Vice_City_Postcard_landscape.jpg',
+            'artworks/RaulBautista/Raul_Bautista_landscape.jpg',
+            'artworks/RealDimez/Real_Dimez_landscape.jpg'
+        ];  
         
         // Randomize the array
         this.backgroundImages = this.shuffleArray([...this.backgroundImages]);
@@ -206,13 +184,12 @@ class GTAVICountdown {
             // Set initial background immediately
             const imageName = this.backgroundImages[0];
             const imageUrl = this.baseUrl + imageName + this.imageParams;
-            backgroundElement.style.backgroundImage = `url(${imageUrl})`;
-            backgroundElement.offsetHeight; // force reflow
+            backgroundElement.src = imageUrl;
             
             // Update background info
             this.updateBackgroundInfo();
             
-            // Start the fade in effect after a short delay to ensure smooth transition
+            // Start fade in effect after a short delay to ensure smooth transition
             setTimeout(() => {
                 backgroundElement.classList.add('active');
             }, 100);
@@ -335,10 +312,10 @@ class GTAVICountdown {
                 
                 if (preloadedImage) {
                     // Use preloaded image for instant swap
-                    backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+                    backgroundElement.src = imageUrl;
                 } else {
                     // Fallback if not preloaded yet
-                    backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+                    backgroundElement.src = imageUrl;
                 }
                 
                 // Update background info
