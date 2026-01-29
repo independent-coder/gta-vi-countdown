@@ -4,7 +4,6 @@ import { DeviceDetector } from './device-detector.js';
 import { BackgroundManager } from './background-manager.js';
 import { CountdownTimer } from './countdown-timer.js';
 import { UIManager } from './ui-manager.js';
-import { MilestonesManager } from './milestones-manager.js';
 
 export class GTAVICountdown {
     constructor() {
@@ -21,7 +20,6 @@ export class GTAVICountdown {
         this.backgroundManager = new BackgroundManager(this.config, this.deviceDetector);
         this.countdownTimer = new CountdownTimer(this.config);
         this.uiManager = new UIManager(this.config);
-        this.milestonesManager = new MilestonesManager(this.config);
         
         // Initialize the app
         this.init();
@@ -33,7 +31,6 @@ export class GTAVICountdown {
         this.countdownTimer.updateProgress();
         this.uiManager.updateQuote();
         this.backgroundManager.initBackgroundRotation();
-        this.milestonesManager.updateMilestones();
         
         // Set up intervals
         this.setupIntervals();
@@ -54,10 +51,6 @@ export class GTAVICountdown {
             this.uiManager.updateQuote();
         }, this.config.QUOTE_CHANGE_INTERVAL);
         
-        // Update milestones every minute
-        setInterval(() => {
-            this.milestonesManager.updateMilestones();
-        }, 60000);
         
         // Change background based on device capabilities
         const rotationInterval = this.deviceDetector.getBackgroundRotationInterval();

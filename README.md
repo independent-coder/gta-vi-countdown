@@ -19,7 +19,9 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 ## 🎮 Features
 
 - **Live Countdown**: Real-time countdown showing years, months, days, hours, minutes, and seconds until GTA VI release
-- **Modern Design**: Dark theme with gold and orange accents inspired by GTA VI branding
+- **Total Days Display**: Additional smaller display showing total remaining days
+- **Modern Typography**: Bebas Neue for title, Roboto Mono for countdown numbers
+- **Modern Design**: Dark theme with cyan and pink gradient accents inspired by GTA VI branding
 - **Progress Tracking**: Visual progress bar showing completion percentage from announcement to release
 - **Official Trailers**: Embedded YouTube trailer links with beautiful card design
 - **Responsive Layout**: Fully responsive design that works perfectly on desktop, tablet, and mobile devices
@@ -32,9 +34,6 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 - **Randomized Display**: Images shuffle randomly for unique viewing experience
 - **Preloaded Images**: All images preloaded for stutter-free transitions
 - **Background Info Display**: Shows current background image name with clean formatting
-- **Amazing Milestones Section**: Tracks key GTA VI dates with real-time countdowns
-- **Smart Milestone Tracking**: Shows past achievements and upcoming events
-- **Release Timeline**: From first trailer to launch day with visual indicators
 - **Toggle Countdown**: Button to hide/show countdown for better image viewing
 - **Professional Disclaimer**: Legal disclaimers for trademark and copyright compliance
 
@@ -58,7 +57,7 @@ This repository is optimized for GitHub Pages deployment. The app is already liv
 - **CSS3**: Flexbox, Grid, animations, and custom properties
 - **ES6 Modules**: Modular JavaScript architecture with imports/exports
 - **Vanilla JavaScript**: No frameworks required - pure, modern JavaScript
-- **Google Fonts**: Orbitron and Roboto for that perfect gaming aesthetic
+- **Google Fonts**: Bebas Neue, Roboto Mono, Orbitron, and Roboto for that perfect gaming aesthetic
 - **Font Awesome**: Professional icons throughout the interface
 
 ## 📱 Browser Support
@@ -110,12 +109,12 @@ gta-vi-countdown/
 │   ├── device-detector.js  # Device detection and optimization
 │   ├── background-manager.js  # Background image management
 │   ├── countdown-timer.js     # Countdown timer functionality
-│   ├── milestones-manager.js   # Milestones tracking and display
 │   └── ui-manager.js          # UI interactions and effects
 ├── assets/             # Additional assets
 │   └── backgrounds/    # Official GTA VI images (hosted locally)
 ├── screenshots/        # Preview images
 ├── README.md           # This file
+├── CHANGELOG.md        # Version history and changes
 ├── LICENSE             # MIT License
 └── .gitignore          # Git ignore file
 ```

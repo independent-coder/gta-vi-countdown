@@ -35,7 +35,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&family=Roboto+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown">
 </head>
@@ -96,6 +96,13 @@
                 </div>
             </div>
 
+            <div class="total-days-container">
+                <div class="total-days-text">
+                    <i class="fas fa-calendar-day"></i>
+                    <span id="total-days">0</span> total days remaining
+                </div>
+            </div>
+
             <div class="trailers-section">
                 <h2 class="trailers-title"><i class="fas fa-film"></i> Official Trailers</h2>
                 <div class="trailers-container">
@@ -126,12 +133,6 @@
                 </div>
             </div>
 
-            <div class="milestones-section">
-                <h2 class="milestones-title"><i class="fas fa-flag"></i> GTA VI Milestones</h2>
-                <div class="milestones-container" id="milestones-container">
-                    <!-- Milestones will be dynamically inserted here -->
-                </div>
-            </div>
 
             <div class="progress-container">
                 <div class="progress-bar">
@@ -144,23 +145,80 @@
                 <i class="fas fa-quote-left"></i> The wait is almost over... <i class="fas fa-quote-right"></i>
             </div>
         </main>
+    </div>
 
-        <footer class="footer">
-            <div class="footer-text">
-                <p>Made by Independent-Coder. Visit the repo <a href="https://github.com/Independent-Coder/gta-vi-countdown" target="_blank">here</a></p>
-                <p>&copy; 2026 GTA VI Countdown. Not affiliated with Rockstar Games.</p>
-                <p>Grand Theft Auto VI is a trademark of Take-Two Interactive Software. All images and trademarks belong to their respective owners.</p>
-                <p>
-                    <a href="https://www.rockstargames.com" target="_blank" rel="noopener">
-                        <i class="fas fa-globe"></i> Rockstar Games
-                    </a> |
-                    <a href="https://twitter.com/RockstarGames" target="_blank" rel="noopener">
-                        <i class="fab fa-twitter"></i> Rockstar Games
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">
+                    <i class="fas fa-gamepad"></i>
+                    GTA VI Countdown
+                </h3>
+                <p class="footer-description">
+                    A fan-made countdown timer for the most anticipated game of the decade.
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/Independent-Coder/gta-vi-countdown" target="_blank" class="footer-link">
+                        <i class="fab fa-github"></i>
+                        GitHub Repository
                     </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Features</h4>
+                <ul class="footer-list">
+                    <li><i class="fas fa-clock"></i> Real-time Countdown Timer</li>
+                    <li><i class="fas fa-image"></i> 75+ Official Background Images</li>
+                    <li><i class="fas fa-film"></i> Official Trailer Links</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Technologies</h4>
+                <ul class="footer-list">
+                    <li><i class="fas fa-code"></i> ES6 Modules</li>
+                    <li><i class="fas fa-paint-brush"></i> Modern CSS3</li>
+                    <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+                    <li><i class="fas fa-font"></i> FontAwesome Icons</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/Independent-Coder" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://independent-coder.github.io/independent-coder/" target="_blank" class="social-link" title="My Website">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://www.rockstargames.com" target="_blank" class="social-link" title="Rockstar Games">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://twitter.com/RockstarGames" target="_blank" class="social-link" title="Rockstar Games Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">
+                    <i class="far fa-copyright"></i>
+                    2026 GTA VI Countdown v1.0.0. All rights reserved. 
+                </p>
+                <p class="made-by">
+                    Made with <i class="fas fa-heart"></i> by 
+                    <a href="https://github.com/Independent-Coder" target="_blank">Independent-Coder</a>
+                </p>
+                <p class="disclaimer">
+                    Not affiliated with Rockstar Games. Grand Theft Auto VI is a trademark of Take-Two Interactive Software.
                 </p>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script type="module" src="js/app.js"></script>

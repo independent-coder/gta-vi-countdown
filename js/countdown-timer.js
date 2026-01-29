@@ -46,6 +46,10 @@ export class CountdownTimer {
         this.updateElement('minutes', minutes);
         this.updateElement('seconds', seconds);
 
+        // Calculate and update total days
+        const totalDays = Math.floor(distance / (1000 * 60 * 60 * 24));
+        this.updateTotalDays(totalDays);
+
         // Add animation effect
         this.animateValue('seconds');
     }
@@ -65,6 +69,13 @@ export class CountdownTimer {
                     element.style.color = '#ffffff';
                 }, 150);
             }
+        }
+    }
+
+    updateTotalDays(totalDays) {
+        const element = document.getElementById('total-days');
+        if (element) {
+            element.textContent = totalDays.toLocaleString();
         }
     }
 
