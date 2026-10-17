@@ -1,42 +1,35 @@
 // Main application class
-import { CONFIG, QUOTES, BACKGROUND_IMAGES, MILESTONES } from './config.js';
+import { CONFIG, QUOTES, BACKGROUND_IMAGES } from './config.js';
 import { DeviceDetector } from './device-detector.js';
 import { BackgroundManager } from './background-manager.js';
 import { CountdownTimer } from './countdown-timer.js';
 import { UIManager } from './ui-manager.js';
+import { GalleryManager } from './gallery.js';
 
 export class GTAVICountdown {
     constructor() {
-        // Initialize configuration
         this.config = CONFIG;
         this.config.QUOTES = QUOTES;
         this.config.BACKGROUND_IMAGES = BACKGROUND_IMAGES;
-        this.config.MILESTONES = MILESTONES;
-        
-        // Initialize device detection
+
         this.deviceDetector = new DeviceDetector(this.config);
-        
-        // Initialize managers
+
         this.backgroundManager = new BackgroundManager(this.config, this.deviceDetector);
         this.countdownTimer = new CountdownTimer(this.config);
         this.uiManager = new UIManager(this.config);
-        
-        // Initialize the app
+        this.galleryManager = new GalleryManager(this.config, this.backgroundManager);
+
         this.init();
     }
 
     init() {
-        // Initialize all components
         this.countdownTimer.updateCountdown();
         this.countdownTimer.updateProgress();
         this.uiManager.updateQuote();
         this.backgroundManager.initBackgroundRotation();
-        
-        // Set up intervals
-        this.setupIntervals();
-        
-        // Add interactive effects
         this.uiManager.addInteractiveEffects();
+
+        this.setupIntervals();
     }
 
     setupIntervals() {
@@ -45,25 +38,19 @@ export class GTAVICountdown {
             this.countdownTimer.updateCountdown();
             this.countdownTimer.updateProgress();
         }, this.config.COUNTDOWN_UPDATE_INTERVAL);
-        
-        // Change quote every 10 seconds
+
+        // Change quote on an interval
         setInterval(() => {
             this.uiManager.updateQuote();
         }, this.config.QUOTE_CHANGE_INTERVAL);
-        
-        
-        // Change background based on device capabilities
-        const rotationInterval = this.deviceDetector.getBackgroundRotationInterval();
+
+        // Rotate the background based on device capabilities
         setInterval(() => {
             this.backgroundManager.rotateBackground();
-        }, rotationInterval);
+        }, this.deviceDetector.getBackgroundRotationInterval());
     }
 }
 
-// Add ripple animation to CSS
-UIManager.addRippleAnimation();
-
-// Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new GTAVICountdown();
 });

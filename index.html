@@ -7,142 +7,175 @@
     <title>GTA VI Countdown – Release Date Timer (November 19, 2026)</title>
 
     <!-- SEO -->
-    <meta name="description" content="Fan-made GTA VI countdown website with a live timer counting down to November 19, 2026">
-    <meta name="keywords" content="GTA VI, GTA 6, date, timer, Grand Theft Auto VI, countdown, release date, Rockstar Games">
-    <meta name="favicon" content="assets/favicon.png">
+    <meta name="description" content="Fan-made GTA VI countdown to November 19, 2026, with the official launch trailer and 191 screenshots, artwork and music images.">
+    <meta name="keywords" content="GTA VI, GTA 6, Grand Theft Auto VI, countdown, timer, release date, Rockstar Games, Vice City, Leonida">
     <meta name="author" content="Independent-Coder">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="canonical" href="https://independent-coder.github.io/gta-vi-countdown/">
+    <meta name="favicon" content="assets/favicon.png">
 
     <!-- Open Graph (Discord, Reddit, etc.) -->
     <meta property="og:title" content="GTA VI Countdown – Release Date Timer">
-    <meta property="og:description" content="Live countdown to the release of Grand Theft Auto VI on November 19, 2026. Fan-made website with trailers and rotating artworks.">
+    <meta property="og:description" content="Live countdown to Grand Theft Auto VI on November 19, 2026, with the official launch trailer, media gallery and Rockstar links.">
     <meta property="og:url" content="https://independent-coder.github.io/gta-vi-countdown/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GTA VI Countdown">
     <meta property="og:locale" content="en_US">
-    <meta property="og:logo" content="https://independent-coder.github.io/gta-vi-countdown/assets/favicon.png" />
     <meta property="og:image" content="https://independent-coder.github.io/gta-vi-countdown/assets/og-image.png">
-    <meta property="og:image:alt" content="Screenshot of GTA VI Countdown website with live timer and background artwork">
+    <meta property="og:image:alt" content="GTA VI Countdown website with a live timer and Vice City artwork">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GTA VI Countdown – Release Date Timer">
-    <meta name="twitter:description" content="Live countdown to the release of Grand Theft Auto VI. Fan-made website with trailers and rotating artworks.">
+    <meta name="twitter:description" content="Live countdown to Grand Theft Auto VI on November 19, 2026. Watch the launch trailer and browse official media.">
     <meta name="twitter:image" content="https://independent-coder.github.io/gta-vi-countdown/assets/og-image.png">
 
-    <!-- Styles -->
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&family=Roboto+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://img.youtube.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pricedown">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <p class="seo-text">
         This fan-made GTA VI countdown shows the exact time left until the release of Grand Theft Auto VI on November 19, 2026. Stay tuned for the most anticipated Rockstar Games release.
     </p>
+
     <!-- Dynamic GTA VI Background Images -->
-    <img class="gta-background" id="gta-background" alt="GTA VI Background" loading="lazy">
-    
+    <img class="gta-background" id="gta-background" alt="" aria-hidden="true">
+
     <!-- Current Background Image Name -->
-    <div class="background-info" id="background-info">
-        <i class="fas fa-image"></i>
-        <span id="background-name">Loading...</span>
+    <div class="background-info" id="background-info" aria-live="polite" aria-atomic="true">
+        <i class="fas fa-image" aria-hidden="true"></i>
+        <span id="background-name">Loading…</span>
+        <button class="background-rotation-toggle" id="resume-background-rotation" type="button" aria-label="Resume automatic background rotation" title="Resume automatic background rotation" hidden>
+            <i class="fas fa-rotate" aria-hidden="true"></i>
+            <span>Resume</span>
+        </button>
     </div>
-    
+
     <!-- Toggle Countdown Button -->
-    <button class="toggle-countdown" id="toggle-countdown" title="Toggle Countdown">
-        <i class="fas fa-eye"></i>
+    <button class="toggle-countdown" id="toggle-countdown" type="button" aria-pressed="false" aria-label="Hide countdown" title="Hide countdown">
+        <i class="fas fa-eye" aria-hidden="true"></i>
     </button>
-    
+
     <div class="container">
         <header class="header">
-            <h1 class="title">GRAND THEFT AUTO VI</h1>
-            <div class="subtitle">Release Date Countdown</div>
+            <p class="eyebrow">Vice City, USA &middot; Leonida</p>
+            <h1 class="title">Grand Theft Auto VI</h1>
+            <p class="subtitle">Release Date Countdown</p>
         </header>
 
         <main class="main-content">
-            <div class="release-date">
-                <div class="date-display"><i class="fas fa-calendar-alt"></i> November 19, 2026</div>
-            </div>
+            <section class="countdown-section" aria-label="Countdown to release">
+                <div class="release-date">
+                    <div class="date-display"><i class="fas fa-calendar-alt" aria-hidden="true"></i> November 19, 2026</div>
+                </div>
 
-            <div class="countdown-container">
-                <div class="countdown-item">
-                    <div class="countdown-value" id="years">0</div>
-                    <div class="countdown-label"><i class="fas fa-clock"></i> Years</div>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="years">0</div>
+                        <div class="countdown-label"><i class="fas fa-clock" aria-hidden="true"></i> Years</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="months">0</div>
+                        <div class="countdown-label"><i class="fas fa-calendar-week" aria-hidden="true"></i> Months</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="days">0</div>
+                        <div class="countdown-label"><i class="fas fa-sun" aria-hidden="true"></i> Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="hours">0</div>
+                        <div class="countdown-label"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="minutes">0</div>
+                        <div class="countdown-label"><i class="fas fa-stopwatch" aria-hidden="true"></i> Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="seconds">0</div>
+                        <div class="countdown-label"><i class="fas fa-bolt" aria-hidden="true"></i> Seconds</div>
+                    </div>
                 </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="months">0</div>
-                    <div class="countdown-label"><i class="fas fa-calendar-week"></i> Months</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="days">0</div>
-                    <div class="countdown-label"><i class="fas fa-sun"></i> Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="hours">0</div>
-                    <div class="countdown-label"><i class="fas fa-hourglass-half"></i> Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="minutes">0</div>
-                    <div class="countdown-label"><i class="fas fa-stopwatch"></i> Minutes</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value" id="seconds">0</div>
-                    <div class="countdown-label"><i class="fas fa-bolt"></i> Seconds</div>
-                </div>
-            </div>
 
-            <div class="total-days-container">
-                <div class="total-days-text">
-                    <i class="fas fa-calendar-day"></i>
-                    <span id="total-days">0</span> total days remaining
+                <div class="total-days-container">
+                    <div class="total-days-text">
+                        <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                        <span id="total-days">0</span> total days remaining
+                    </div>
                 </div>
-            </div>
 
-            <div class="trailers-section">
-                <h2 class="trailers-title"><i class="fas fa-film"></i> Official Trailers</h2>
-                <div class="trailers-container">
-                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" class="trailer-link">
-                        <div class="trailer-card">
-                            <div class="trailer-thumbnail">
-                                <div class="play-button"><i class="fas fa-play"></i></div>
-                                <img src="https://img.youtube.com/vi/QdBZY2fkU-0/maxresdefault.jpg" alt="Trailer 1" loading="lazy">
-                            </div>
-                            <div class="trailer-info">
-                                <h3>Trailer 1</h3>
-                                <p>December 2023</p>
-                            </div>
+                <div class="progress-container">
+                    <div class="progress-bar" role="progressbar" aria-label="Countdown progress" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-fill" id="progress"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0% Complete</div>
+                </div>
+
+                <section class="preload-countdown" aria-labelledby="preload-heading" aria-live="polite">
+                    <div class="preload-countdown-heading">
+                        <span class="preload-countdown-icon"><i class="fas fa-download" aria-hidden="true"></i></span>
+                        <div>
+                            <h2 id="preload-heading">Game Preload</h2>
+                            <p>Preload begins November 12, 2026</p>
                         </div>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank" class="trailer-link">
-                        <div class="trailer-card">
-                            <div class="trailer-thumbnail">
-                                <div class="play-button"><i class="fas fa-play"></i></div>
-                                <img src="https://img.youtube.com/vi/VQRLujxTm3c/maxresdefault.jpg" alt="Trailer 2" loading="lazy">
-                            </div>
-                            <div class="trailer-info">
-                                <h3>Trailer 2</h3>
-                                <p>May 2025</p>
-                            </div>
+                    </div>
+                    <div class="preload-countdown-grid" id="preload-countdown-grid">
+                        <div class="preload-countdown-item"><span class="preload-countdown-value" id="preload-days">0</span><span class="preload-countdown-label">Days</span></div>
+                        <div class="preload-countdown-item"><span class="preload-countdown-value" id="preload-hours">00</span><span class="preload-countdown-label">Hours</span></div>
+                        <div class="preload-countdown-item"><span class="preload-countdown-value" id="preload-minutes">00</span><span class="preload-countdown-label">Minutes</span></div>
+                        <div class="preload-countdown-item"><span class="preload-countdown-value" id="preload-seconds">00</span><span class="preload-countdown-label">Seconds</span></div>
+                    </div>
+                    <p class="preload-countdown-complete" id="preload-countdown-complete" hidden>Preload day is here!</p>
+                </section>
+            </section>
+
+            <section class="trailers-section" aria-labelledby="trailers-heading">
+                <h2 class="section-title" id="trailers-heading"><i class="fas fa-film" aria-hidden="true"></i> Official Trailers</h2>
+                <div class="trailers-container" id="trailers-container"></div>
+            </section>
+
+            <section class="links-section" aria-labelledby="links-heading">
+                <h2 class="section-title" id="links-heading"><i class="fas fa-star" aria-hidden="true"></i> Official Links</h2>
+                <div class="official-links" id="official-links"></div>
+            </section>
+
+            <section class="gallery-section" aria-labelledby="gallery-heading">
+                <div class="gallery-heading-row">
+                    <h2 class="section-title" id="gallery-heading"><i class="fas fa-images" aria-hidden="true"></i> Official Gallery</h2>
+                    <button class="gallery-toggle" id="toggle-gallery" type="button" aria-expanded="true" aria-controls="gallery-content">
+                        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                        <span class="gallery-toggle-label">Hide gallery</span>
+                    </button>
+                </div>
+                <div class="gallery-content" id="gallery-content">
+                    <div class="gallery-content-inner">
+                        <p class="section-subtitle">Official screenshots, wallpapers and music art &mdash; <span id="gallery-total">0</span> images</p>
+                        <div class="gallery-filters" id="gallery-filters" role="group" aria-label="Filter gallery"></div>
+                        <div class="gallery-navigation" id="gallery-navigation">
+                            <button class="gallery-back" id="gallery-back-to-characters" type="button" hidden>
+                                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                                <span>All Characters</span>
+                            </button>
                         </div>
-                    </a>
+                        <div class="gallery-grid" id="gallery-grid"></div>
+                    </div>
                 </div>
-            </div>
-
-
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progress"></div>
-                </div>
-                <div class="progress-text" id="progress-text">0% Complete</div>
-            </div>
+            </section>
 
             <div class="motivational-quote" id="quote">
-                <i class="fas fa-quote-left"></i> The wait is almost over... <i class="fas fa-quote-right"></i>
+                <i class="fas fa-quote-left" aria-hidden="true"></i> The wait is almost over... <i class="fas fa-quote-right" aria-hidden="true"></i>
             </div>
         </main>
     </div>
@@ -151,67 +184,82 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3 class="footer-title">
-                    <i class="fas fa-gamepad"></i>
+                    <i class="fas fa-gamepad" aria-hidden="true"></i>
                     GTA VI Countdown
                 </h3>
                 <p class="footer-description">
                     A fan-made countdown timer for the most anticipated game of the decade.
                 </p>
                 <div class="footer-links">
-                    <a href="https://github.com/Independent-Coder/gta-vi-countdown" target="_blank" class="footer-link">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/Independent-Coder/gta-vi-countdown" target="_blank" rel="noopener" class="footer-link">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                         GitHub Repository
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
-                <h4 class="footer-heading">Features</h4>
+                <h4 class="footer-heading">Media Gallery</h4>
                 <ul class="footer-list">
-                    <li><i class="fas fa-clock"></i> Real-time Countdown Timer</li>
-                    <li><i class="fas fa-image"></i> 75+ Official Background Images</li>
-                    <li><i class="fas fa-film"></i> Official Trailer Links</li>
+                    <li><i class="fas fa-image" aria-hidden="true"></i> 99 Official Screenshots</li>
+                    <li><i class="fas fa-palette" aria-hidden="true"></i> 25 Artwork &amp; Wallpapers</li>
+                    <li><i class="fas fa-gem" aria-hidden="true"></i> 51 Ultimate Edition Benefits</li>
+                    <li><i class="fas fa-record-vinyl" aria-hidden="true"></i> 12 Vintage Vice City Images</li>
+                    <li><i class="fas fa-music" aria-hidden="true"></i> 4 Music Images</li>
+                    <li><i class="fas fa-film" aria-hidden="true"></i> <a href="https://www.rockstargames.com/VI/media/videos" target="_blank" rel="noopener">4 Official Videos</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
-                <h4 class="footer-heading">Technologies</h4>
-                <ul class="footer-list">
-                    <li><i class="fas fa-code"></i> ES6 Modules</li>
-                    <li><i class="fas fa-paint-brush"></i> Modern CSS3</li>
-                    <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
-                    <li><i class="fas fa-font"></i> FontAwesome Icons</li>
+                <h4 class="footer-heading">Official Links</h4>
+                <ul class="footer-list footer-list-links">
+                    <li>
+                        <i class="fas fa-shirt" aria-hidden="true"></i>
+                        <a href="https://store.rockstargames.com/merchandise/gtavi-goodtime-state-vice-city-collection" target="_blank" rel="noopener">Merch Collection</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-headphones" aria-hidden="true"></i>
+                        <a href="https://www.rockstargames.com/VI/music" target="_blank" rel="noopener">Official Music</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-film" aria-hidden="true"></i>
+                        <a href="https://www.rockstargames.com/VI/media/videos" target="_blank" rel="noopener">Launch Trailer &amp; Videos</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-newspaper" aria-hidden="true"></i>
+                        <a href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener">Rockstar Media</a>
+                    </li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h4 class="footer-heading">Connect</h4>
                 <div class="social-links">
-                    <a href="https://github.com/Independent-Coder" target="_blank" class="social-link" title="GitHub">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/Independent-Coder" target="_blank" rel="noopener" class="social-link" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="https://independent-coder.github.io/independent-coder/" target="_blank" class="social-link" title="My Website">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <a href="https://independent-coder.github.io/independent-coder/" target="_blank" rel="noopener" class="social-link" title="My Website" aria-label="My website">
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.rockstargames.com" target="_blank" class="social-link" title="Rockstar Games">
-                        <i class="fas fa-globe"></i>
+                    <a href="https://www.rockstargames.com" target="_blank" rel="noopener" class="social-link" title="Rockstar Games" aria-label="Rockstar Games">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
                     </a>
-                    <a href="https://twitter.com/RockstarGames" target="_blank" class="social-link" title="Rockstar Games Twitter">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://twitter.com/RockstarGames" target="_blank" rel="noopener" class="social-link" title="Rockstar Games Twitter" aria-label="Rockstar Games on Twitter">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p class="copyright">
-                    <i class="far fa-copyright"></i>
-                    2026 GTA VI Countdown v1.0.0. All rights reserved. 
+                    <i class="far fa-copyright" aria-hidden="true"></i>
+                    2026 GTA VI Countdown v1.1.0. All rights reserved.
                 </p>
                 <p class="made-by">
-                    Made with <i class="fas fa-heart"></i> by 
-                    <a href="https://github.com/Independent-Coder" target="_blank">Independent-Coder</a>
+                    Made with <i class="fas fa-heart" aria-hidden="true"></i> by
+                    <a href="https://github.com/Independent-Coder" target="_blank" rel="noopener">Independent-Coder</a>
                 </p>
                 <p class="disclaimer">
                     Not affiliated with Rockstar Games. Grand Theft Auto VI is a trademark of Take-Two Interactive Software.
@@ -219,6 +267,31 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+        <div class="lightbox-backdrop" data-action="close"></div>
+        <button class="lightbox-close" type="button" data-action="close" aria-label="Close viewer">
+            <i class="fas fa-xmark" aria-hidden="true"></i>
+        </button>
+        <button class="lightbox-nav prev" type="button" aria-label="Previous image">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <figure class="lightbox-figure">
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-details">
+                <figcaption class="lightbox-caption"></figcaption>
+                <button class="lightbox-set-background" id="lightbox-set-background" type="button" aria-pressed="false">
+                    <i class="fas fa-image" aria-hidden="true"></i>
+                    <span>Set as background</span>
+                </button>
+            </div>
+        </figure>
+        <button class="lightbox-nav next" type="button" aria-label="Next image">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <div class="lightbox-counter" aria-hidden="true"></div>
+    </div>
 
     <!-- Scripts -->
     <script type="module" src="js/app.js"></script>

@@ -6,6 +6,7 @@ export class CountdownTimer {
 
     updateCountdown() {
         const now = new Date().getTime();
+        this.updatePreloadCountdown(now);
         const distance = this.config.TARGET_DATE - now;
 
         if (distance < 0) {
@@ -52,6 +53,34 @@ export class CountdownTimer {
 
         // Add animation effect
         this.animateValue('seconds');
+    }
+
+    updatePreloadCountdown(now = Date.now()) {
+        const grid = document.getElementById('preload-countdown-grid');
+        const completeMessage = document.getElementById('preload-countdown-complete');
+        if (!grid || !completeMessage) return;
+
+        const distance = this.config.PRELOAD_DATE - now;
+        if (distance <= 0) {
+            grid.hidden = true;
+            completeMessage.hidden = false;
+            return;
+        }
+
+        grid.hidden = false;
+        completeMessage.hidden = true;
+        const totalSeconds = Math.ceil(distance / 1000);
+        const values = {
+            'preload-days': Math.floor(totalSeconds / 86400),
+            'preload-hours': Math.floor((totalSeconds % 86400) / 3600),
+            'preload-minutes': Math.floor((totalSeconds % 3600) / 60),
+            'preload-seconds': totalSeconds % 60
+        };
+
+        Object.entries(values).forEach(([id, value]) => {
+            const element = document.getElementById(id);
+            if (element) element.textContent = String(value).padStart(id === 'preload-days' ? 1 : 2, '0');
+        });
     }
 
     updateElement(id, value) {
