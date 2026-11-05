@@ -3,7 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Independent-Coder/gta-vi-countdown)
 ![GitHub stars](https://img.shields.io/github/stars/Independent-Coder/gta-vi-countdown)
 
-A modern, responsive countdown timer for the Grand Theft Auto VI release date (November 19, 2026), with the official launch trailer and a browsable gallery of 191 images.
+A modern, responsive countdown timer for the Grand Theft Auto VI release date (November 19, 2026), with the official launch trailer and a browsable gallery of 231 images.
 
 ## Preview
 <img src="./screenshots/desktop.jpg" alt="Desktop preview" width="400" />
@@ -23,13 +23,13 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 - **Preload Countdown**: Separate live countdown to the November 12, 2026 game preload date
 - **Official Trailers**: Embedded YouTube trailer cards for Trailer 1, Trailer 2, *An Extended Look* and the October 15, 2026 Launch Trailer
 - **Official Links**: Direct links to the GTA VI merch collection, official music and latest trailer news
-- **Media Gallery**: Browse all **191 official images** — 99 screenshots, 25 artwork & wallpapers, 51 Ultimate Edition benefit images, 12 Vintage Vice City Pack images and 4 music images — filterable by category and grouped by character/location
+- **Media Gallery**: Browse all **231 official images** — 139 screenshots, 25 artwork & wallpapers, 51 Ultimate Edition benefit images, 12 Vintage Vice City Pack images and 4 music images — filterable by category and grouped by character/location
 - **Character Browser**: Browse character cards first, then open an individual character to see their screenshots
 - **Collapsible Gallery**: Hide or reveal the gallery with an accessible slide animation
 - **Custom Backgrounds**: Set any gallery image as the background; automatic rotation pauses until resumed
 - **Lightbox Viewer**: Click any gallery image to open a full-resolution viewer with keyboard and arrow navigation
-- **Lightweight Gallery**: 560px thumbnails loaded with native lazy loading keep the 191-image grid fast
-- **Dynamic Background System**: All 191 official GTA VI images hosted locally, rotating every 30 seconds
+- **Lightweight Gallery**: 560px thumbnails loaded with native lazy loading keep the 231-image grid fast
+- **Dynamic Background System**: All 231 official GTA VI images hosted locally, rotating every 30 seconds
 - **Randomized Display**: Images shuffle randomly for a unique viewing experience
 - **Preloaded Images**: Upcoming backgrounds are preloaded for stutter-free transitions
 - **Background Info Display**: Shows the current background image name
@@ -105,7 +105,7 @@ Full-resolution images are stored as progressive JPEGs at 3840x2160. Regenerate 
 
 Media is grouped by folder:
 
-- `characters/` and `locations/` — the 99 official screenshots
+- `characters/` and `locations/` — the 139 official screenshots
 - `artworks/` — the 25 official artwork & wallpapers
 - `ultimate-edition/` — the 51 Ultimate Edition benefit images
 - `vintage-vice-city/` — the 12 Vintage Vice City Pack images
@@ -113,7 +113,7 @@ Media is grouped by folder:
 
 **Note**: The source images are pulled from Rockstar's own media downloads to avoid CDN rate limits. They are used for display purposes only.
 
-**Repository size**: roughly 168 MB of full-size JPEGs plus ~6 MB of thumbnails (about 175 MB total), so this repository is intentionally asset-heavy. Fork and deploy accordingly.
+**Repository size**: roughly 213 MB of full-size JPEGs plus ~7 MB of thumbnails (about 220 MB total), so this repository is intentionally asset-heavy. Fork and deploy accordingly.
 
 ### Toggle Countdown
 The eye button in the top-right corner allows users to:
@@ -137,7 +137,7 @@ gta-vi-countdown/
 │   ├── gallery.js             # Gallery grid, filters and lightbox
 │   └── ui-manager.js          # Trailers, official links and UI interactions
 ├── assets/
-│   ├── backgrounds/           # 191 official GTA VI images (5 categories, see above)
+│   ├── backgrounds/           # 231 official GTA VI images (5 categories, see above)
 │   ├── thumbs/                # Web-optimized gallery thumbnails
 │   ├── favicon.png
 │   └── og-image.png

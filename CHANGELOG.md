@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - 2026-10-15
+## [Unreleased] - 2026-11-05
 
 ### Added
+- The 39 official screenshots from the November 5, 2026 **Launch Gallery**: Jason Duval 11–19, Jason and Lucia 14–20, Lucia Caminos 11–14, Grassrivers 07–08, Leonida Keys 07, Port Gellhorn 07 and Vice City 13–27
+- The Vice City beach and skyline image featured on the November 3, 2026 Pre-Load Newswire post
+- Web-optimized thumbnails for the 40 new images
 - Separate live game-preload countdown to November 12, 2026, alongside the November 19 release countdown
 - Official **Launch Trailer** (October 15, 2026) with a YouTube preview card and Rockstar Newswire link
 - Two official *Jason and Lucia: Lock and Load* artwork variants and the Justice score background
-- Gallery expanded to 191 images: 99 screenshots, 25 artworks, 51 Ultimate Edition benefits, 12 Vintage Vice City images and 4 music images
+- Gallery expanded to 231 images: 139 screenshots, 25 artworks, 51 Ultimate Edition benefits, 12 Vintage Vice City images and 4 music images
 - Added a slide-toggle for the gallery, grouped gallery sections, and an option to set any gallery image as the background (with automatic rotation paused until resumed)
 - Added a character-card index that opens an individual character’s screenshots with a return-to-characters control
 
