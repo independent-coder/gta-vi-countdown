@@ -22,6 +22,14 @@ export class CountdownTimer {
         let months = targetDate.getMonth() - currentDate.getMonth();
         let days = targetDate.getDate() - currentDate.getDate();
         
+        // Borrow a day when the target's time of day has not elapsed yet, so
+        // the days field matches the total-days figure (13d 10h, not 14d 10h).
+        const targetSeconds = targetDate.getHours() * 3600 + targetDate.getMinutes() * 60 + targetDate.getSeconds();
+        const currentSeconds = currentDate.getHours() * 3600 + currentDate.getMinutes() * 60 + currentDate.getSeconds();
+        if (targetSeconds < currentSeconds) {
+            days--;
+        }
+
         // Adjust for negative values
         if (days < 0) {
             months--;
