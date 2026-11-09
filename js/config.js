@@ -2,7 +2,7 @@
 export const CONFIG = {
     // Date settings
     TARGET_DATE: new Date('November 19, 2026 00:00:00').getTime(),
-    PRELOAD_DATE: new Date('November 12, 2026 00:00:00').getTime(),
+    PRELOAD_DATE: new Date('November 10, 2026 00:00:00').getTime(),
     START_DATE: new Date('February 4, 2022 00:00:00').getTime(),
 
     // Media settings
