@@ -3,7 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Independent-Coder/gta-vi-countdown)
 ![GitHub stars](https://img.shields.io/github/stars/Independent-Coder/gta-vi-countdown)
 
-A modern, responsive countdown timer for the Grand Theft Auto VI release date (November 19, 2026), with the official launch trailer and a browsable gallery of 231 images.
+A modern, responsive countdown timer for the Grand Theft Auto VI release date (November 19, 2026), with the official launch trailer and a browsable gallery of 233 images.
 
 ## Preview
 <img src="./screenshots/desktop.jpg" alt="Desktop preview" width="400" />
@@ -23,13 +23,13 @@ This repository primarily serves as the source code for the GitHub Pages deploym
 - **Preload Countdown**: Separate live countdown to the November 12, 2026 game preload date
 - **Official Trailers**: Embedded YouTube trailer cards for Trailer 1, Trailer 2, *An Extended Look* and the October 15, 2026 Launch Trailer
 - **Official Links**: Direct links to the GTA VI merch collection, official music and latest trailer news
-- **Media Gallery**: Browse all **231 official images** — 139 screenshots, 25 artwork & wallpapers, 51 Ultimate Edition benefit images, 12 Vintage Vice City Pack images and 4 music images — filterable by category and grouped by character/location
+- **Media Gallery**: Browse all **233 official images** — 139 screenshots, 27 artwork & wallpapers, 51 Ultimate Edition benefit images, 12 Vintage Vice City Pack images and 4 music images — filterable by category and grouped by character/location
 - **Character Browser**: Browse character cards first, then open an individual character to see their screenshots
 - **Collapsible Gallery**: Hide or reveal the gallery with an accessible slide animation
 - **Custom Backgrounds**: Set any gallery image as the background; automatic rotation pauses until resumed
 - **Lightbox Viewer**: Click any gallery image to open a full-resolution viewer with keyboard and arrow navigation
-- **Lightweight Gallery**: 560px thumbnails loaded with native lazy loading keep the 231-image grid fast
-- **Dynamic Background System**: All 231 official GTA VI images hosted locally, rotating every 30 seconds
+- **Lightweight Gallery**: 560px thumbnails loaded with native lazy loading keep the 233-image grid fast
+- **Dynamic Background System**: All 233 official GTA VI images hosted locally, rotating every 30 seconds
 - **Randomized Display**: Images shuffle randomly for a unique viewing experience
 - **Preloaded Images**: Upcoming backgrounds are preloaded for stutter-free transitions
 - **Background Info Display**: Shows the current background image name
@@ -106,7 +106,7 @@ Full-resolution images are stored as progressive JPEGs at 3840x2160. Regenerate 
 Media is grouped by folder:
 
 - `characters/` and `locations/` — the 139 official screenshots
-- `artworks/` — the 25 official artwork & wallpapers
+- `artworks/` — the 27 official artwork & wallpapers
 - `ultimate-edition/` — the 51 Ultimate Edition benefit images
 - `vintage-vice-city/` — the 12 Vintage Vice City Pack images
 - `music/` — 4 official backgrounds from the music section
@@ -137,7 +137,7 @@ gta-vi-countdown/
 │   ├── gallery.js             # Gallery grid, filters and lightbox
 │   └── ui-manager.js          # Trailers, official links and UI interactions
 ├── assets/
-│   ├── backgrounds/           # 231 official GTA VI images (5 categories, see above)
+│   ├── backgrounds/           # 233 official GTA VI images (5 categories, see above)
 │   ├── thumbs/                # Web-optimized gallery thumbnails
 │   ├── favicon.png
 │   └── og-image.png

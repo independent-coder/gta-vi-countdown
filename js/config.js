@@ -93,6 +93,11 @@ export const TRAILERS = [
         title: 'Launch Trailer',
         date: 'October 2026',
         videoId: 'rz1B4B2yBZY'
+    },
+    {
+        title: 'Pre-Load Now Trailer',
+        date: 'November 2026',
+        videoId: '_yl5ELcmugI'
     }
 ];
 
@@ -257,6 +262,8 @@ export const BACKGROUND_IMAGES = [
     'artworks/JasonLuciaLockAndLoadLogos/Jason_Lucia_Lock_And_Load_With_Logos_landscape.jpg',
     'artworks/JasonLuciaRobbery/Jason_and_Lucia_Robbery_landscape.jpg',
     'artworks/JasonLuciaRobberyLogo/Jason_and_Lucia_Robbery_With_Logo_landscape.jpg',
+    'artworks/JasonLuciaRooftop/Jason_and_Lucia_Rooftop_landscape.jpg',
+    'artworks/JasonLuciaRooftopLogos/Jason_and_Lucia_Rooftop_With_Logos_landscape.jpg',
     'artworks/OfficialCoverArt/Official_Cover_Art_landscape.jpg',
     'artworks/Postcards/Ambrosia/Ambrosia_Postcard_landscape.jpg',
     'artworks/Postcards/Grassrivers/Grassrivers_Postcard_landscape.jpg',
@@ -348,7 +355,7 @@ export const SCREENSHOTS = BACKGROUND_IMAGES.filter(
     (path) => path.startsWith('characters/') || path.startsWith('locations/')
 );
 
-// The 25 official artwork & wallpapers.
+// The 27 official artwork & wallpapers.
 export const ARTWORKS = BACKGROUND_IMAGES.filter((path) => path.startsWith('artworks/'));
 
 // The 51 Ultimate Edition benefit images.
